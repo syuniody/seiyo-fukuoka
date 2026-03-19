@@ -1,0 +1,12 @@
+{
+  "name": "seiyo-fukuoka",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "marked": "^12.0.0"
+  }
+}

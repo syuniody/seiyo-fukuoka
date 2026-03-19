@@ -1,0 +1,25 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/Oda_SyUNi/Library/CloudStorage/GoogleDrive-kazuhiro-oda@surala.jp/マイドライブ/0.おまけの学校/学習塾向けLP制作/seiyo_fukuoka"
+publishOrigin = "default"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

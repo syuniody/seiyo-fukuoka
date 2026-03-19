@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>塾長ブログ｜正陽ゼミナール</title>
-  <meta name="description" content="正陽ゼミナールの塾長ブログ。学習法・教室ニュース・受験情報を発信しています。">
-  <meta property="og:title" content="塾長ブログ｜正陽ゼミナール">
-  <meta property="og:description" content="学習法・教室ニュース・受験情報を発信しています。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/blog/">
-  <meta property="og:image" content="https://example.com/images/og-image.jpg">
+  <title>CMSテスト投稿：ブログの書き方｜正陽ゼミナール</title>
+  <meta name="description" content="Decap CMSからのテスト投稿です。管理画面から簡単にブログ記事を投稿できます。">
+  <meta property="og:title" content="CMSテスト投稿：ブログの書き方｜正陽ゼミナール">
+  <meta property="og:description" content="Decap CMSからのテスト投稿です。管理画面から簡単にブログ記事を投稿できます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://example.com/blog/article.html">
+  <meta property="og:image" content="https://example.com/images/blog-thumb-01.svg">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,38 +54,45 @@
   <main>
     <div class="page-header">
       <div class="container">
-        <p class="page-header__breadcrumb"><a href="../">ホーム</a> &gt; 塾長ブログ</p>
-        <h1 class="page-header__title">塾長ブログ</h1>
+        <p class="page-header__breadcrumb"><a href="../">ホーム</a> &gt; <a href="./">塾長ブログ</a> &gt; CMSテスト投稿：ブログの書き方</p>
+        <h1 class="page-header__title">CMSテスト投稿：ブログの書き方</h1>
       </div>
     </div>
 
-    <section class="section">
+    <article class="article section">
       <div class="container">
-        <!-- カテゴリフィルター -->
-        <div class="blog-categories">
-          <span class="blog-category is-active">すべて</span>
-          <span class="blog-category">学習法</span>
-          <span class="blog-category">教室ニュース</span>
-          <span class="blog-category">受験情報</span>
+        <div class="article__header">
+          <span class="card__tag">教室ニュース</span>
+          <time class="article__date">2026-03-15</time>
         </div>
+        <div class="article__eyecatch">
+          <img src="../images/blog-thumb-01.svg" alt="CMSテスト投稿：ブログの書き方" width="800" height="450" loading="lazy">
+        </div>
+        <div class="article__body">
+          <h2>CMSからブログ記事が書けます</h2>
+<p>正陽ゼミナールのホームページでは、管理画面からブログ記事を簡単に投稿できます。</p>
+<h3>使い方</h3>
+<ol>
+<li>管理画面（/admin/）にアクセス</li>
+<li>「ブログ記事」→「新規作成」</li>
+<li>タイトル・カテゴリ・本文を入力</li>
+<li>「公開」ボタンを押す</li>
+</ol>
+<p>記事は自動的にサイトに反映されます。</p>
 
-        <!-- 記事一覧 -->
-        <!-- BLOG_LIST_START -->
+        </div>
+      </div>
+    </article>
 
-          <article class="card blog-card">
-            <a href="2026-03-15-test-post.html" class="card__link">
-              <div class="card__image">
-                <img src="../images/blog-thumb-01.svg" alt="CMSテスト投稿：ブログの書き方" loading="lazy">
-              </div>
-              <div class="card__body">
-                <span class="card__tag">教室ニュース</span>
-                <time class="card__date" datetime="2026-03-15">2026.03.15</time>
-                <h3 class="card__title">CMSテスト投稿：ブログの書き方</h3>
-                <p class="card__text">Decap CMSからのテスト投稿です。管理画面から簡単にブログ記事を投稿できます。</p>
-              </div>
-            </a>
-          </article>
-          <!-- BLOG_LIST_END -->
+    <!-- CTA -->
+    <section class="contact-cta">
+      <div class="container">
+        <h2 class="contact-cta__title">無料体験授業 受付中！</h2>
+        <p class="contact-cta__text">お子さまの可能性を一緒に広げませんか？まずはお気軽にお問い合わせください。</p>
+        <div class="contact-cta__actions">
+          <a href="../contact/" class="btn btn--primary btn--lg">体験授業を申し込む</a>
+          <a href="tel:092-576-9350" class="btn btn--outline btn--lg">&#9742; 092-576-9350</a>
+        </div>
       </div>
     </section>
   </main>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>塾長ブログ｜正陽ゼミナール</title>
-  <meta name="description" content="正陽ゼミナールの塾長ブログ。学習法・教室ニュース・受験情報を発信しています。">
-  <meta property="og:title" content="塾長ブログ｜正陽ゼミナール">
-  <meta property="og:description" content="学習法・教室ニュース・受験情報を発信しています。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/blog/">
-  <meta property="og:image" content="https://example.com/images/og-image.jpg">
+  <title>{{title}}｜正陽ゼミナール</title>
+  <meta name="description" content="{{description}}">
+  <meta property="og:title" content="{{title}}｜正陽ゼミナール">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://example.com/blog/article.html">
+  <meta property="og:image" content="https://example.com/images/blog-thumb-01.svg">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,38 +54,35 @@
   <main>
     <div class="page-header">
       <div class="container">
-        <p class="page-header__breadcrumb"><a href="../">ホーム</a> &gt; 塾長ブログ</p>
-        <h1 class="page-header__title">塾長ブログ</h1>
+        <p class="page-header__breadcrumb"><a href="../">ホーム</a> &gt; <a href="./">塾長ブログ</a> &gt; {{title}}</p>
+        <h1 class="page-header__title">{{title}}</h1>
       </div>
     </div>
 
-    <section class="section">
+    <article class="article section">
       <div class="container">
-        <!-- カテゴリフィルター -->
-        <div class="blog-categories">
-          <span class="blog-category is-active">すべて</span>
-          <span class="blog-category">学習法</span>
-          <span class="blog-category">教室ニュース</span>
-          <span class="blog-category">受験情報</span>
+        <div class="article__header">
+          <span class="card__tag">{{category}}</span>
+          <time class="article__date">{{date}}</time>
         </div>
+        <div class="article__eyecatch">
+          <img src="{{thumbnail}}" alt="{{title}}" width="800" height="450" loading="lazy">
+        </div>
+        <div class="article__body">
+          {{body}}
+        </div>
+      </div>
+    </article>
 
-        <!-- 記事一覧 -->
-        <!-- BLOG_LIST_START -->
-
-          <article class="card blog-card">
-            <a href="2026-03-15-test-post.html" class="card__link">
-              <div class="card__image">
-                <img src="../images/blog-thumb-01.svg" alt="CMSテスト投稿：ブログの書き方" loading="lazy">
-              </div>
-              <div class="card__body">
-                <span class="card__tag">教室ニュース</span>
-                <time class="card__date" datetime="2026-03-15">2026.03.15</time>
-                <h3 class="card__title">CMSテスト投稿：ブログの書き方</h3>
-                <p class="card__text">Decap CMSからのテスト投稿です。管理画面から簡単にブログ記事を投稿できます。</p>
-              </div>
-            </a>
-          </article>
-          <!-- BLOG_LIST_END -->
+    <!-- CTA -->
+    <section class="contact-cta">
+      <div class="container">
+        <h2 class="contact-cta__title">無料体験授業 受付中！</h2>
+        <p class="contact-cta__text">お子さまの可能性を一緒に広げませんか？まずはお気軽にお問い合わせください。</p>
+        <div class="contact-cta__actions">
+          <a href="../contact/" class="btn btn--primary btn--lg">体験授業を申し込む</a>
+          <a href="tel:092-576-9350" class="btn btn--outline btn--lg">&#9742; 092-576-9350</a>
+        </div>
       </div>
     </section>
   </main>

@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: syuniody/seiyo-fukuoka
+  branch: main
+
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+locale: "ja"
+
+collections:
+  - name: "blog"
+    label: "ブログ記事"
+    folder: "blog/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "カテゴリ", name: "category", widget: "select", options: ["学習法", "教室ニュース", "受験情報", "イベント"] }
+      - { label: "アイキャッチ画像", name: "thumbnail", widget: "image", required: false }
+      - { label: "概要", name: "description", widget: "text", required: false }
+      - { label: "本文", name: "body", widget: "markdown" }
