@@ -158,6 +158,31 @@ function build() {
     console.log('  Built: blog/' + slug + '.html');
   }
   posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  // Update TOP PAGE with latest 3 posts
+  const topPage = path.join(__dirname, 'index.html');
+  if (fs.existsSync(topPage)) {
+    let topHTML = fs.readFileSync(topPage, 'utf8');
+    const latest3 = posts.slice(0, 3);
+    const topCards = latest3.map(p => `
+          <a href="blog/${p.slug}.html" class="card">
+            <div class="card__body">
+              <span class="card__tag">${p.category || '教室ニュース'}</span>
+              <h3 class="card__title">${p.title}</h3>
+              <p class="card__date">${formatDate(p.date)}</p>
+            </div>
+          </a>`).join('\n');
+
+    if (topHTML.includes('<!-- TOP_BLOG_POSTS -->')) {
+      topHTML = topHTML.replace(
+        /<!-- TOP_BLOG_POSTS -->[\s\S]*?<!-- \/TOP_BLOG_POSTS -->/,
+        '<!-- TOP_BLOG_POSTS -->\n' + topCards + '\n          <!-- /TOP_BLOG_POSTS -->'
+      );
+      fs.writeFileSync(topPage, topHTML, 'utf8');
+      console.log('  Updated: index.html with latest ' + latest3.length + ' posts');
+    }
+  }
+
   const blogIndex = path.join(BLOG_DIR, 'index.html');
   if (fs.existsSync(blogIndex)) {
     let indexHTML = fs.readFileSync(blogIndex, 'utf8');
